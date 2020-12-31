@@ -36,6 +36,6 @@ public class Practice8 {
 		default:
 			System.out.println("잘 못 입력하셨습니다.");
 		}
-		System.out.printf("%d는", month );
+		System.out.printf("%d월은 %s입니다.", month, season );
 	}
 }
