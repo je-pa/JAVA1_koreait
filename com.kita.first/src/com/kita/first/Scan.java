@@ -1,3 +1,5 @@
+package com.kita.first;
+
 import java.util.Scanner;
 
 public class Scan {
