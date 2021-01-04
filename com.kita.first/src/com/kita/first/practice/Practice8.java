@@ -19,6 +19,9 @@ public class Practice8 {
 		int month = scan.nextInt();
 		String season = null;
 		
+		//String month = scan.next(); // try catch 오류방지
+		//int monthNum = Integer.parseInt(month); // string 으로 받은후 int형
+		
 		switch(month) {
 		case 3: case 4: case 5:
 			season = "봄";
