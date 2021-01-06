@@ -18,11 +18,13 @@ public class Practice19 {
 		while(true) {
 			System.out.print("숫자를 입력하세요(0입력시 종료):");
 			int num = sc.nextInt();
-			sum+=num;
+			
 			if(num==0) {
 				break;
 			}
+			sum+=num;
 		}
+		sc.close();
 		System.out.printf("합계:%d",sum);
 		
 	}
