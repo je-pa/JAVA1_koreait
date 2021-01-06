@@ -37,8 +37,13 @@ public class Practice16 {
 				if("Y".equals(result) ) {
 					break;
 				}
-			}while(true); {
-				System.out.printf("오늘 저녁은 %s이다.", food);
-			}		
+//				switch(result) {
+//				case "Y": break; 
+//				default : System.out.print("다시 뽑습니다.");
+//				} 왜 안됑
+			}while(true);
+			
+			System.out.printf("오늘 저녁은 %s이다.", food);
+					
 	}
 }
