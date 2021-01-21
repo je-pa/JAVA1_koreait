@@ -5,9 +5,9 @@ public class Test {
 		int n1=3;
 		int n2=5;
 		int n3=7;
-		FinalStatic fs1 = new FinalStatic(n1); 
-		FinalStatic fs2 = new FinalStatic(n2); 
-		FinalStatic fs3 = new FinalStatic(n3); 
+		FinalStatic fs1 = new FinalStatic(4,1); 
+		FinalStatic fs2 = new FinalStatic(5,2); 
+		FinalStatic fs3 = new FinalStatic(6,3); 
 		
 		System.out.println();
 		System.out.println(fs1.N1);

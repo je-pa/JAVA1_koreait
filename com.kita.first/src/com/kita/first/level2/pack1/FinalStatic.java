@@ -5,10 +5,10 @@ public class FinalStatic {
 	static final int N2=3;
 	static int n3 =1;
 	
-	FinalStatic(int n1){
+	FinalStatic(int n1, int n2){
 		this.N1=n1;
 		printNum(n1);
-//		n3 =n2;
+		n3 =n2;
 	}
 	
 	static void printNum(int input) {
