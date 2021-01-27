@@ -16,7 +16,7 @@ public class TryCatch {
 //		
 		Animal ani =new Animal();
 		Cat cat=new Cat();
-		ani=cat;
+//		ani=cat;
 		
 		try {
 			Dog dog = (Dog)ani;

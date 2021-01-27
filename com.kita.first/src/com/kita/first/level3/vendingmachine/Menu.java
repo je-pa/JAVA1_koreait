@@ -14,6 +14,7 @@ public class Menu {
 	public Menu(int len) {
 		menuArr = new String[len];
 		priceArr = new int[len];
+		System.out.printf("%d칸짜리 배열이 생성되었습니다",len);
 	}
 	
 	//메소드
@@ -36,22 +37,22 @@ public class Menu {
 	}
 	
 	//메뉴배열에 순차적으로 값 입력
-	void inputArrItems(String[] arr){
+	void inputArrItems(){
 		Scanner scan = new Scanner(System.in);
 		
-		for(int i=0;i<arr.length;i++) {
-			System.out.printf("%d번째 값 입력: ",i+1);
+		for(int i=0;i<menuArr.length;i++) {
+			System.out.printf("%d번째 메뉴이름 입력: ",i+1);
 			String str =scan.next();
-			arr[i] =str;
+			menuArr[i] =str;
 		}
 		scan.close();
 	}
 	
 	//가격배열에 순차적으로 값 입력
-	void inputArrItems(int[] arr){
+	void inputArrPrices(){
 		Scanner scan = new Scanner(System.in);
 		
-		for(int i=0;i<arr.length;i++) {
+		for(int i=0;i<priceArr.length;i++) {
 			System.out.printf("%d번째 값 입력: ",i+1);
 			
 			String str=scan.next();
@@ -61,7 +62,7 @@ public class Menu {
 				i--;
 				continue;
 			}
-			arr[i] =num;
+			priceArr[i] =num;
 		}
 		scan.close();
 	}

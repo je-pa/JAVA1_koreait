@@ -27,46 +27,47 @@ public class play {
 //			합계: 3700원
 			int len =6;
 			Menu menu=new Menu(len);
+			PrintV print = new PrintV();
+			
+			menu.inputArrItems();
+			menu.inputArrPrices();
+			
+			System.out.println("----메뉴----");
+			for(int i=1;i<=len;i++) {
+				print.printMenus(menu, i);
+			}
 			
 			//메뉴, 가격배열에 값 입력
 			
-			
-			Scanner scan = new Scanner(System.in);
-			String[] menuArr = {"콜라", "사이다","캔커피", "데자와", "환타", "웰치스"};
-			int[] priceArr = {900, 700, 400, 500, 600, 1000};
-			int num;
-			int total=0;
-			
-			//메뉴판 찍기 기능
-			System.out.println("--메뉴--");
-			for(int i=0; i<menuArr.length; i++) {
-				System.out.printf("%d. %s %d원\n", i+1, menuArr[i], priceArr[i]);
-			}
+			Game game =new Game();
+			int myNum;
 			
 			//0입력시까지 반복되는 반복문 기능
 			while(true) {
 				//번호 입력받는 기능
-				System.out.print("메뉴를 입력하세요(0 입력 시 종료): ");
-				num = scan.nextInt();
+				myNum=game.inputNum();
 				
 				//입력받은 번호 예외처리 기능
-				if(num<0 || num>6) {
+				if(myNum<1 || myNum>len) {
 					System.out.println("범위 내의 숫자를 입력하세요.");
 					continue;
-				} else if(num == 0) {
+				} else if(myNum == 0) {
 					break;
 				}
-				
-				//합계 합산 기능
-				total += priceArr[num-1];
-				
-				//입력받은 번호의 음료 내용 프린트 기능
-				System.out.printf("%s %d원\n", menuArr[num-1], priceArr[num-1]);
+				game.setCount();
+//				game.setTotalPrice();
+				game.sumMenuPrice(menu, myNum);
+				print.printMenus(menu, myNum);
+//				
+//				//합계 합산 기능
+//				total += priceArr[num-1];
+//				
+//				//입력받은 번호의 음료 내용 프린트 기능
+//				System.out.printf("%s %d원\n", menuArr[num-1], priceArr[num-1]);
 				
 			}
-			scan.close();
 			//합계 찍어주는 기능
-			System.out.printf("합계: %d원\n", total);
+			print.printTotalPrice(game);
 		}
 
 }
