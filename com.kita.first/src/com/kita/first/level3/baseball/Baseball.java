@@ -3,10 +3,9 @@ package com.kita.first.level3.baseball;
 public class Baseball {
 	//컴퓨터가 랜덤으로 숫자 뽑는 클래스 
 	
-	int max;
-	int min;
-	final int LEN = 3;
-	int[] rArr;
+	private int max;
+	private int min;
+	private int[] rArr;
 	
 	/*
 	public Baseball(int gameCnt) {
@@ -23,6 +22,7 @@ public class Baseball {
 		this.max =max;
 		this.min=min;
 		random();
+		showAnswer();
 	}
 	
 	//메소드 
@@ -45,7 +45,8 @@ public class Baseball {
 		
 	void showAnswer() {
 		for(int val : rArr) {
-			System.out.println(val);
+			System.out.print(val+" ");
 		}
+		System.out.println();
 	}
 }

@@ -3,10 +3,12 @@ package com.kita.first.level3;
 public class Test  {
 
 	public static void main(String[] args) {
-		ScanNum sn =new ScanNum();
-		String str= sn.inputNumString();
-		int result =Utils.parStrToInt(str);
-		sn.printMsg(result);
+		
+		
+//		ScanNum sn =new ScanNum();
+//		String str= sn.inputNumString();
+//		int result =Utils.parStrToInt(str);
+//		sn.printMsg(result);
 
 //		ProGamer p1 =new ProGamer();
 //		Game game =new Game();
