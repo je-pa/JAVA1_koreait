@@ -1,9 +1,10 @@
-package com.kita.first.level4;
+package  com.kita.first.level4 ;
 
-public class Parent {
-	String parentField;
+public  class  Parent {
+	String parentField =  " 부모 필드 " ;
 	
-	void parentMethod() {
-		System.out.println("부모객체입니다.");
+	void  parentMethod () {
+		System.out.println ( " 부모 객체입니다. " );
 	};
+
 }
