@@ -2,33 +2,34 @@ package com.kita.first.level4;
 
 public class Test {
 	public static void main(String[] args) {
-		Parent p = new Parent() {
-			String childField ="자식필드";
+//		Parent p = new Parent() {
+//			String childField ="자식필드";
+//			
+//			void childMethod() {
+//				System.out.println("자식 메소드입니다.");
+//			}
+//			@Override
+//			void parentMethod() {
+//				System.out.println("자식 객체입니다.");
+//			}; //새미콜론 왜있지
+//		};
+//		p.parentMethod();
+//		Child child = new Child();
+//		child.childMethod();
+//		child.childMethod2(new Parent() {
+//			@Override
+//			void parentMethod() {};
+//		});
+		ThrowsException2 te2 = new ThrowsException2();
+		try {
+			te2.method1();
+		}catch(Exception e) {
 			
-			void childMethod() {
-				System.out.println("자식 메소드입니다.");
-			}
-			@Override
-			void parentMethod() {
-				System.out.println("자식 객체입니다.");
-			}; //새미콜론 왜있지
-		};
-		p.parentMethod();
-		Child child = new Child();
-		child.childMethod();
-		child.childMethod2(new Parent() {
-			@Override
-			void parentMethod() {};
-		});
+		}
 	}
 }
 	
-//ThrowsException2 te2 = new ThrowsException2();
-//try {
-//	te2.method1();
-//}catch(Exception e) {
-//	
-//}
+
 		
 //		ThrowsException te= new ThrowsException();
 //		try {
